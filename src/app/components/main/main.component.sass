@@ -8,9 +8,21 @@
  justify-items: center
 
 .containerMain
+ display: grid
+ grid-template-columns: 1fr
+ grid-template-rows: repeat(5, auto)
+ gap: 30px 0
  background: aqua
  width: 300px
  height: auto
+ &__logo
+  figure
+   display: flex
+   justify-content: center
+ &__TextPara
+  h1,p
+   text-align: center
+   font-weight: normal
  &__formSub
   form
    display: flex
@@ -20,15 +32,12 @@
    img
     width: 100%
     height: 100%
-
-
-
-
+ &__socialMedia
+  p
+   text-align: center
 
 @media screen and ( min-width: 1024px )
  .containerMain
   &__formSub
    form
     flex-direction: row
-
-      
