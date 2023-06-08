@@ -47,6 +47,7 @@
     color: #fff
    input[type="email"]
     border: 1px solid $Gray
+    outline: none
     ::placeholder
       padding: 0 20px
       color: $PaleBlue
@@ -56,8 +57,18 @@
     width: 100%
     height: 100%
  &__socialMedia
+  display: flex
+  flex-direction: column
+  align-items: center
   p
    text-align: center
+  &--socialIcons
+    width: 80%
+    display: flex
+    flex-direction: row
+    justify-content: space-around
+    input[type="image"]
+      width: 20px
 
 @media screen and ( min-width: 1024px )
  .containerMain
