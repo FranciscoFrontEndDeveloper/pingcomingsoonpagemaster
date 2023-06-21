@@ -13,7 +13,6 @@
  grid-template-columns: 1fr
  grid-template-rows: repeat(5, auto)
  gap: 30px 0
- background: aqua
  width: 300px
  height: auto
  &__logo
@@ -26,9 +25,13 @@
   gap: 20px 0
   h1,p
    text-align: center
-   font-weight: normal
+   font-weight: normal      
   h1
     color: $Gray
+    font-size: $Fontsize
+    font-weight: 300
+  p
+    font-size: 12px
   strong
     color: #000
  &__formSub
@@ -39,18 +42,19 @@
    gap: 10px 0      
    input
     width: 90%
-    padding: 15px 0
+    padding: 15px 20px
     border-radius: 40px
    input[type="submit"]
     background: $Blue
     border: none
     color: #fff
+    font-weight: 600
    input[type="email"]
     border: 1px solid $Gray
     outline: none
-    ::placeholder
-      padding: 0 20px
-      color: $PaleBlue
+    &::placeholder
+      margin: 0 20px
+      color: $Gray
  &__footerImage
   figure
    img
@@ -60,10 +64,14 @@
   display: flex
   flex-direction: column
   align-items: center
+  gap: 50px 0
   p
    text-align: center
+   color: $Gray
+   font-size: 10px
+   font-weight: 300
   &--socialIcons
-    width: 80%
+    width: 50%
     display: flex
     flex-direction: row
     justify-content: space-around
@@ -72,7 +80,18 @@
 
 @media screen and ( min-width: 1024px )
  .containerMain
+  width: 700px
   &__formSub
    form
     flex-direction: row
     justify-content: center
+    gap: 0 20px   
+    input[type="submit"]
+      flex: 1 
+    input[type="email"]
+      flex: 3 
+  &__TextPara
+  &__socialMedia
+    &--socialIcons
+      width: 20%
+    
