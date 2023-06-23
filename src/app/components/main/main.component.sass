@@ -42,14 +42,6 @@
    input
     padding: 15px 20px
     border-radius: 40px
-   input[type="submit"]
-    background: $Blue
-    border: none
-    color: #fff
-    font-weight: 600
-   input[type="email"]
-    border: 1px solid $Gray
-    outline: none
     &::placeholder
       margin: 0 20px
       color: $Gray
@@ -76,13 +68,34 @@
     input[type="image"]
       width: 20px
 
+.inputEmail
+  border: 1px solid $Gray
+  outline: none
+  width: 100%
+.inputButton
+  width: 100%
+  background: $Blue
+  border: none
+  color: #fff
+  font-weight: 600
+  cursor: pointer
+  &:hover
+    opacity: 0.7
+  
 .errorForm
-  input[type="email"]
-    border: 1px solid red
+  border: 1px solid $LightRed
 .errorMessage
-  color: red 
-  padding: 20px
+  color: $LightRed
+  padding: 10px 20px
+  font-size: 12px
+  text-align: center
 @media screen and ( min-width: 1024px )
+ .errorMessage
+  text-align: left
+ .inputEmail
+  width: 300px
+ .inputButton
+  width: 180px
  .containerMain
   width: 700px
   &__formSub
@@ -95,6 +108,8 @@
     input[type="email"]
       flex: 3 
   &__TextPara
+    h1
+      font-size: 38px
   &__socialMedia
     &--socialIcons
       width: 20%

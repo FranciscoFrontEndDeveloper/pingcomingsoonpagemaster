@@ -14,15 +14,16 @@
       <form action="" [formGroup]="formPing" (ngSubmit)="submitForm()">
         <div>
           <input
+            class="inputEmail"
             formControlName="email"
             type="email"
             placeholder="Your email address..."
             [ngClass]="{ errorForm: formError }"
           />
-          <p *ngIf="formError" class="errorMessage">mensaje error</p>
+          <p *ngIf="formError" class="errorMessage">Please provide a valid email address</p>
         </div>
         <div>
-          <input type="submit" value="Notify Me" />
+          <input class="inputButton" type="submit" value="Notify Me" />
         </div>
       </form>
     </div>
